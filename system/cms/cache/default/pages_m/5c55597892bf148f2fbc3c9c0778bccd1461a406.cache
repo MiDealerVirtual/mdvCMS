@@ -1,0 +1,15 @@
+a:3:{s:16:"__cache_contents";O:8:"stdClass":20:{s:2:"id";s:1:"6";s:4:"slug";s:14:"financiamiento";s:5:"title";s:14:"Financiamiento";s:3:"uri";s:14:"financiamiento";s:9:"parent_id";s:1:"0";s:11:"revision_id";s:1:"1";s:9:"layout_id";s:1:"3";s:3:"css";s:0:"";s:2:"js";s:514:"// Callbacks to execute on page load
+var callbacks = [];
+
+// Part Order Form & Service Apt Form
+callbacks[0] = function()
+  {
+    // [FINANCE] create submit button event
+    form_API.createSubmitButtonClickEvent( '#jq_finance_submit_btn_frm_1', '#finance_frm_1', "finance", "_frm_1" );
+    
+    // [FINANCE] create form event
+    form_API.createFormSubmitEvent( "#finance_frm_1", "_frm_1", "#jq_finance_submit_btn_frm_1", "#jq_finance_loader_frm_1" );
+  };
+
+// Execute all callbacks
+cms_API.onJQReady( callbacks );";s:10:"meta_title";s:14:"Financiamiento";s:13:"meta_keywords";s:183:"Financiamiento, credit, financing, automarca kia, bayamón, puero rico, 00960, kia, Bayamón,San Juan,Carolina,Cataño,Vega Baja,Vega Alta,Aguas Buenas,Trujillo Alto,Toa Alta,Guaynabo";s:16:"meta_description";s:309:"Financiamiento disponible para tu vehiculo nuevo con Automarca Kia. Con nuestra solicitud virtual, solicitar para un prestamo nunca ha sido mas facil. Contáctenos para mas información. Automarca Kia en Bayamón, Puerto Rico 00960. Sirviendo a Bayamón, y todo el area metropolitana de San Juan, Puerto Rico.";s:11:"rss_enabled";s:1:"0";s:16:"comments_enabled";s:1:"0";s:6:"status";s:4:"live";s:10:"created_on";s:10:"1314217068";s:10:"updated_on";s:10:"1317401779";s:13:"restricted_to";s:0:"";s:7:"is_home";s:1:"0";s:5:"order";s:1:"5";}s:15:"__cache_created";i:1317430129;s:20:"__cache_dependencies";a:0:{}}

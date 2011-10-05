@@ -1,0 +1,28 @@
+a:3:{s:16:"__cache_contents";O:8:"stdClass":20:{s:2:"id";s:1:"5";s:4:"slug";s:11:"contactenos";s:5:"title";s:12:"Contáctenos";s:3:"uri";s:11:"contactenos";s:9:"parent_id";s:1:"0";s:11:"revision_id";s:1:"1";s:9:"layout_id";s:1:"3";s:3:"css";s:0:"";s:2:"js";s:940:"// Callbacks to execute on page load
+var callbacks = [];
+
+// Page configuration
+callbacks[0] = function()
+  {
+    // init tabs
+    tab_API.initTabs();
+  };
+
+// Part Order Form & Service Apt Form
+callbacks[1] = function()
+  {
+    // [CONTACT 1] create submit button event
+    form_API.createSubmitButtonClickEvent( '.jq_contact_submit_btn > a', '#contact_frm_1', "contact", "_frm_1" );
+    
+    // [CONTACT 1] create form event
+    form_API.createFormSubmitEvent( "#contact_frm_1", "_frm_1", ".jq_contact_submit_btn > a", "#jq_contact_loader_frm_1" );
+
+    // [CONTACT 2] create submit button event
+    form_API.createSubmitButtonClickEvent( '.jq_contact_submit_btn > a', '#contact_frm_2', "contact", "_frm_2" );
+    
+    // [CONTACT 1] create form event
+    form_API.createFormSubmitEvent( "#contact_frm_2", "_frm_2", ".jq_contact_submit_btn > a", "#jq_contact_loader_frm_2" );
+  };
+
+// Execute all callbacks
+cms_API.onJQReady( callbacks );";s:10:"meta_title";s:12:"Contáctenos";s:13:"meta_keywords";s:236:"Automarca Kia,Puerto Rico,Numero Telefonico,Telefono, Llamar,Contacte,Sobre Nosotros, Sobre Automarca Kia,Kia,Bayamón,San Juan,Carolina,Cataño,Vega Baja,Vega Alta,Aguas Buenas,Trujillo Alto,Toa Alta,Guaynabo,Puerto Rico,PR 00960,00960";s:16:"meta_description";s:341:"Contactenos llamando (787) 488-1011 o por nuestra pagina web www.AutomarcaPR.com. Automarca Kia es uno de los Concesionarios Kia mas reconocidos en todo Puerto Rico. Automarca Kia en Bayamón, Puerto Rico. Sirviendo a Bayamón, San Juan, Carolina, Cataño, Vega Baja, Vega Alta, Aguas Buenas, Trujillo Alto, Toa Alta y Guaynabo, Puerto Rico.";s:11:"rss_enabled";s:1:"0";s:16:"comments_enabled";s:1:"0";s:6:"status";s:4:"live";s:10:"created_on";s:10:"1313537246";s:10:"updated_on";s:10:"1317338831";s:13:"restricted_to";s:0:"";s:7:"is_home";s:1:"0";s:5:"order";s:1:"3";}s:15:"__cache_created";i:1317417932;s:20:"__cache_dependencies";a:0:{}}

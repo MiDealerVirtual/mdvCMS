@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	{pyro:theme:partial name="metadata"}
+</head>
+<body>
+
+    <!-- start container -->
+    <div id="container">
+    
+		<!-- start rotator -->
+	{if '{pyro:page:slug}' == 'inicio'}
+		<div class="rotator clearfix">
+            <div id="features">
+                {pyro:widget_fetcher:area slug="homepage-rotator"}
+            </div>
+        </div>
+    {else}
+	    <div class="rotator"></div>
+    {/if}
+        <!-- end rotator -->
+    
+    	<!-- start header -->
+        {pyro:theme:partial name="header"}
+        <!-- end header -->
+        
+	{if '{pyro:page:slug}' == 'inicio'}
+	    <div class="box_home_image"></div>
+    {/if}
