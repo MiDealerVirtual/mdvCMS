@@ -3,4 +3,4 @@
 	url = git@github.com:MiDealerVirtual/plugins 
 [submodule "addons/default/modules"]
 	path = addons/default/modules
-	url = git@:github.com:MiDealerVirtual/modules
+	url = git@github.com:MiDealerVirtual/modules
