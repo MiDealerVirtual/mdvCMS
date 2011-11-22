@@ -19,7 +19,8 @@ function varsToExtract()
 			array( 'mdv_form_options', '{pyro:variables:mdv_form_options}', true ),
 			array( 'page_title_seo_suffix', '{pyro:variables:page_title_seo_suffix}' ),
 			array( 'dealer_name', '{pyro:variables:dealer_inc_name}' ),
-			array( 'inventory_page_keywords', '{pyro:variables:inventory_page_keywords}' )
+			array( 'inventory_page_keywords', '{pyro:variables:inventory_page_keywords}' ),
+			array( 'max_similar', '{pyro:variables:vehicle_page_max_similar}' ),
 			);
 }
 
