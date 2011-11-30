@@ -71,21 +71,25 @@ function getVehicleImagePath( $config, $v, $image_type, $prefix )
 	return $config->item( 'images_base_url' ).$config->item( ( $v->IOL_IMAGE == 1 ) ? 'iol_vehicle_pictures_'.$image_type.'_path' : 'vehicle_pictures_'.$image_type.'_path' ).$prefix.$v->IMAGE;	
 }
 
-function transalateVehicleAttr( $column, $value )
+function transalateVehicleAttr( &$v /* In / Out */ )
 {
-	// try to find a translation
-	if( $column == "CONDITION" && $value == "new" )
-		return "Nuevo";
-	else if( $column == "CONDITION" )
-		return "Usado";
-		
-	if( $column == "TRANSMISSION" && $value == "automatic" )
-		return "Autom&aacute;tico";
-	else if( $column == "TRANSMISSION" )
-		return "Manual";
+	// Transform condition
+	switch( $v->CONDITION )
+	{
+		case "new": $v->CONDITION = "Nuevo"; break;
+		case "used": $v->CONDITION = "Usado"; break;
+		case "certified": $v->CONDITION = "Certificado"; break;
+		default: $v->CONDITION = ucfirst( strtolower( $v->CONDITION ) );
+	}
 	
-	// return unchanged value
-	return $value;	
+	// Transform transmission
+	switch( $v->TRANSMISSION )
+	{
+		case "automatic": $v->TRANSMISSION = "Autom&aacute;tico"; break;
+		case "manual": $v->TRANSMISSION = "Manual"; break;
+		case "cvt": $v->TRANSMISSION = "Autom&aacute;tico"; break;
+		default: $v->TRANSMISSION = ucfirst( strtolower( $v->TRANSMISSION ) );
+	}
 }
 
 function translateNumber( $number, $floating_pos = 2 )
