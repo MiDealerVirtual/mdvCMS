@@ -1,0 +1,28 @@
+	<!-- title -->
+	<title><?php if( isset( $seo_vehicle_label ) ): echo $seo_vehicle_label; else: ?>{if '{pyro:page:slug}' != ''}{pyro:page:title}{else}Inventario{/if}<?php endif; ?>{if '{pyro:page:slug}' != 'inicio'} | {pyro:variables:non_seo_dealer_inc_name}{/if} {pyro:variables:page_title_seo_suffix}</title>
+    
+    <!-- load css files -->
+    {pyro:widget_fetcher:instance id="59"}
+    
+    <!-- load all jquery and every plugin -->
+    {pyro:widget_fetcher:instance id="58"}
+    
+    <!-- load typekit -->
+    {pyro:widget_fetcher:instance id="42"}
+    <!-- end load typekit -->
+    
+<?php if( isset( $js_vars ) ): ?>
+    <!-- Load JS vars required -->
+	<script>
+<?php foreach( $js_vars as $v ):
+		echo $v;
+   endforeach; ?>
+	</script>
+<?php endif; ?>
+    
+    <!-- favicon -->
+    {pyro:theme:favicon file="favicon.ico" base="url"}
+    
+    <!-- meta information -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    {pyro:template:metadata}
