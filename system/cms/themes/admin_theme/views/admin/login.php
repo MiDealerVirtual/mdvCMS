@@ -59,7 +59,7 @@
 	</div>
 	<center>
 		<ul id="login-footer">
-			<li><a href="http://pyrocms.com/">Powered by PyroCMS</a></li>
+			<li><a href="http://www.midealervirtual.com/">www.MiDealerVirtual.com</a></li>
 		</ul>
 	</center>
 </body>

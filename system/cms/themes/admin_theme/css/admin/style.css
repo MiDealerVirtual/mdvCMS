@@ -470,10 +470,10 @@ body#login #login-box header {
 	margin-bottom: 25px;
 }
 #login-logo {
-	background-image: url('../../img/admin/login-logo.png');
+	background-image: url('../../img/admin/mdv-login-logo.png');
 	background-repeat: no-repeat;
-	width: 25px;
-	height: 40px;
+	width: 150px;/*25*/
+	height: 75px;/*40*/
 	margin: 0 auto;
 }
 body#login #login-box ul,
