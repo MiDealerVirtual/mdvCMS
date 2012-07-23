@@ -594,13 +594,15 @@ ul#login-footer li {
 	list-style: none;
 }
 ul#login-footer li a  {
-	background-image:  url('../../img/admin/poweredby.png');
+	/*background-image:  url('../../img/admin/poweredby.png');
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	width: 125px;
 	height: 21px;
 	float: left;
-	text-indent: -9999px;
+	text-indent: -9999px;*/
+	color:#999;
+	text-decoration:none;
 }
 ul#login-footer li a:hover {
 	background-position: 0 -23px;
