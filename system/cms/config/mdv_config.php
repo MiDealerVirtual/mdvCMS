@@ -245,3 +245,22 @@ $config['mdvdb_creds']['cachedir'] = "";
 $config['mdvdb_creds']['char_set'] = "utf8";
 $config['mdvdb_creds']['dbcollat'] = "utf8_general_ci";
 $config['mdvdb_creds']['hostname'] = "localhost";
+if ( false ) {
+	// use legacy database for everything
+	$config['mdvdb_creds']['hostname'] = '174.122.148.70';
+	$config['mdvdb_creds']['username'] = 'mdv_dbroot';
+	$config['mdvdb_creds']['password'] = 'MDVdbaccess';
+	$config['mdvdb_creds']['database'] = 'mdv_iol_merger';
+} else {
+	// use local database only for inventory
+	$config['mdvdb_creds']['username'] = 'mdv';
+	$config['mdvdb_creds']['password'] = 'midealervirtual';
+	$config['mdvdb_creds']['database'] = 'mdv_iol_cabrera';
+	
+	// use legacy database only for leads
+	$config['mdvdb_leads_creds'] = $config['mdvdb_creds'];
+	$config['mdvdb_leads_creds']['hostname'] = '174.122.148.70';
+	$config['mdvdb_leads_creds']['username'] = 'mdv_dbroot';
+	$config['mdvdb_leads_creds']['password'] = 'MDVdbaccess';
+	$config['mdvdb_leads_creds']['database'] = 'mdv_iol_merger';
+}

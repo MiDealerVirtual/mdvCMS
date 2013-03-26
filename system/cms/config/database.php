@@ -55,3 +55,6 @@ $active_group = ENVIRONMENT;
 $db['live']['hostname'] = 'localhost';
 $db['live']['dbdriver'] = 'mysql';
 $db['live']['dbprefix'] = '';
+$db['live']['username'] = 'mdv';
+$db['live']['password'] = 'midealervirtual';
+$db['live']['database'] = 'mdv_cms_cabrera_auto';

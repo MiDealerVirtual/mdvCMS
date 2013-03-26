@@ -6,3 +6,6 @@ Icon?
 Thumbs.db
 system/cms/logs/*
 system/cms/cache/*
+.ftpquota
+error_log
+*.cache

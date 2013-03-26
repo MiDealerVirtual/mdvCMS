@@ -1,15 +1,12 @@
-a:3:{s:16:"__cache_contents";O:8:"stdClass":20:{s:2:"id";s:1:"7";s:4:"slug";s:8:"trade-in";s:5:"title";s:8:"Trade-In";s:3:"uri";s:8:"trade-in";s:9:"parent_id";s:1:"0";s:11:"revision_id";s:1:"1";s:9:"layout_id";s:1:"3";s:3:"css";s:0:"";s:2:"js";s:478:"// Callbacks to execute on page load
+a:3:{s:16:"__cache_contents";O:8:"stdClass":20:{s:2:"id";s:1:"8";s:4:"slug";s:8:"trade-in";s:5:"title";s:25:"Trade In con Cabrera Auto";s:3:"uri";s:8:"trade-in";s:9:"parent_id";s:1:"0";s:11:"revision_id";s:1:"1";s:9:"layout_id";s:1:"1";s:3:"css";s:0:"";s:2:"js";s:240:"// Callbacks to execute on page load
 var callbacks = [];
 
-// Trade Form
+// Page configuration
 callbacks[0] = function()
   {
-    // [TRADE] create submit button event
-    form_API.createSubmitButtonClickEvent( '#jq_trade_submit_btn_frm_1', '#trade_frm_1', "tradein", "_frm_1" );
-    
-    // [TRADE] create form event
-    form_API.createFormSubmitEvent( "#trade_frm_1", "_frm_1", "#jq_trade_submit_btn_frm_1", "#jq_tradein_loader_frm_1" );
+    // init forms api
+    forms_api.init( { "form_class":"form"} );
   };
 
 // Execute all callbacks
-cms_API.onJQReady( callbacks );";s:10:"meta_title";s:8:"Trade-in";s:13:"meta_keywords";s:196:"Trade-in, trade in, lease, cambio de vehiculo, automarca kia, bayamón,  puero rico, 00960, kia, Bayamón,San Juan,Carolina,Cataño,Vega Baja,Vega Alta,Aguas Buenas,Trujillo Alto,Toa Alta,Guaynabo";s:16:"meta_description";s:277:"Cotiza tu trade-in con Automarca Kia. Con nuestra solicitud virtual, solicitar para un trade-in nunca ha sido mas facil. Contactenos para mas informacion. Automarca Kia en Bayamón, Puerto Rico 00960. Sirviendo a Bayamón, y todo el area metropolitana de San Juan, Puerto Rico.";s:11:"rss_enabled";s:1:"0";s:16:"comments_enabled";s:1:"0";s:6:"status";s:4:"live";s:10:"created_on";s:10:"1314220328";s:10:"updated_on";s:10:"1317402309";s:13:"restricted_to";s:0:"";s:7:"is_home";s:1:"0";s:5:"order";s:1:"6";}s:15:"__cache_created";i:1317430149;s:20:"__cache_dependencies";a:0:{}}
+cms_API.onJQReady( callbacks );";s:10:"meta_title";s:25:"Trade-In con Cabrera Auto";s:13:"meta_keywords";s:246:"CabreraAuto.com,Cabrera Auto,Buick,Cadillac,Chevrolet,Chrysler,Dodge,Ford,GMC,Suzuki,Jeep,Mazda,Mitsubishi,Nissan,RAM,Trade-in,cambio de vehiculo,Arecibo Puerto Rico 00614,Hatillo,Camuy,Manati,Isabela, Vega Baja,Toa Baja,Toa Alta,Bayamon,San Juan";s:16:"meta_description";s:385:"Cotiza tu trade-in con Cabrera Auto. Con nuestra solicitud virtual, solicitar para un trade-in nunca ha sido mas facil. Contactenos para mas informacion. Cambia tu vehiculo hoy con Cabrera Auto. Cabrera Auto en Arecibo, Puerto Rico 00614. Sirviendo a Arecibo PR, Hatillo PR, Camuy PR, Manati PR, Isabela PR, Vega Baja PR, Vega Alta PR, Toa Baja PR, Toa Alta PR, Bayamon PR, San Juan PR";s:11:"rss_enabled";s:1:"0";s:16:"comments_enabled";s:1:"0";s:6:"status";s:4:"live";s:10:"created_on";s:10:"1340689259";s:10:"updated_on";s:10:"1351477052";s:13:"restricted_to";s:0:"";s:7:"is_home";s:1:"0";s:5:"order";s:1:"6";}s:15:"__cache_created";i:1363125992;s:20:"__cache_dependencies";a:0:{}}

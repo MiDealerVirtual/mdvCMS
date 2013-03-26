@@ -1,0 +1,6 @@
+.btn-play-pause:hover {
+	background:url(../img/sprite.png) no-repeat -121px -220px;
+}
+.autorotation-disabled .btn-play-pause:hover {
+	background-position:-180px -220px;
+}

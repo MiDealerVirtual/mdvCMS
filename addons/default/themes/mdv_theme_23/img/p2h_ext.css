@@ -1,0 +1,349 @@
+/**
+ * Site wide helper classes & styles
+ */
+.is-hidden {
+	display:none !important;
+}
+.full-width {
+	width:100% !important;
+}
+.photo-list .btn-more.hovering {
+	background-position:-121px -260px;
+}
+.visual-box .btn-more.hovering {
+	background-position:-33px -220px;
+}
+.gallery .holder li {
+	height:160px;
+	overflow:hidden;
+}
+
+.two-columns .contact-form h2, .video-block .text-area {
+	color:#003399 !important;
+}
+.contact-form h3 {
+	color:#b4c5d4 !important;
+}
+.contact-form label {
+	color:#738ba0;
+}
+.logo {
+	margin-top:-11px;
+	margin-right:27px;
+	width:177px !important;
+	height:40px !important;
+	position:relative;
+}
+
+#nav {
+	/*padding:16px 0 0 0 !important;*/
+	font-weight:900;
+}
+.slideshow .text-box .more {
+	text-transform:uppercase;
+}
+.chat-link {
+	width: 70px;
+	height: 245px;
+}
+#Pcontent {
+	line-height:14px !important;
+}
+.drop li {
+	font:12px/18px Arial, Helvetica, sans-serif;
+	font-weight:700;
+	padding:2px 0 0;
+}
+
+.google-map { margin:10px 0 5px 0;
+}
+
+.header-holder .tel{
+	float:left;
+	padding:0 7px 0 18px;
+	margin:0;
+	width:119px;
+	overflow:hidden;
+	background:url(../img/icon-sprite.png) no-repeat 0 5px;
+}
+
+.header-holder .work-time{
+	width:70px;
+	background:none url(../img/icon-sprite.png) no-repeat 0px -50px !important;
+}
+
+/**
+ * Home page classes & styles
+ */
+ 
+.logos-section .logo-holder-2{
+	display:table;
+	height:60px;
+	width:160px;
+	margin-bottom:0px;
+}
+
+.logos-section .logo-holder-2 a{
+	text-align:center;
+	display:table-cell;
+	vertical-align:middle;
+	background:url(../img/bg-logo-block.png);
+}
+ 
+ 
+ 
+ .form-box .title-block{
+	background:#3f6ca6 url(../img/sprite.png) no-repeat -440px 0px;
+}
+
+ 
+.seo-content {
+	position:absolute;
+	top:-10000px;
+	left:-10000px;
+}
+.is-home .visual-box .heading h3 {
+	width:105px;
+	height:32px; /*15*/
+	overflow:hidden;
+}
+/*.is-home .logos-section ul.slideset li {
+	height:326px !important;
+	overflow:hidden !important;	
+}
+.is-home .logos-section ul.slideset li img {
+	position:relative !important;
+	top: -50px !important
+}
+
+.logos-section .logos{
+	background:url(../img/bg-logos-section.png);
+}*/
+
+.is-home .logos-slide .holder {
+	background:url(../img/img-brand-bg-all.jpg) 0 -50px no-repeat
+}
+.not-home .logos-slide .holder {
+	background:url(../img/img-brand-bg-all.jpg) 0 0px no-repeat
+}
+/**
+ * Inventory page classes & styles
+ */
+#tab-gallery .visual-box .heading h3 {
+	width:160px;
+	height:30px;
+	overflow:hidden;
+}
+.tabset .list-tab.active:after {
+	background-position:-70px -350px !important;
+}
+.tabset .gallery-tab:after {
+	background-position:-35px -350px !important;
+}
+.tabset .gallery-tab.active:after, .tabset .gallery-tab:hover:after {
+	background-position:0px -350px !important;
+}
+.js-used-widget .visual-box .heading h3 {
+	width:105px;
+	height:32px; /*15*/
+	overflow:hidden;
+}
+table.visual-box h3 {
+	font-size:16px !important;
+	line-height:18px;
+}
+/*.not-home .logos-section .holder {
+	height:376px !important;
+	overflow:hidden !important;	
+}*/
+
+
+.image-box {
+	border:0px solid red;
+	max-height:86px;
+	max-width:160px;
+	overflow:hidden;
+	position:relative;
+	background:#fff;
+}
+.image-box img {
+	border:0px solid lime;
+	min-height:86px;
+	min-width:160px;
+	margin-left:0px;
+}
+.visual-box .btn-more, .gallery .btn-more, .photo-list .btn-more {
+	border:0px solid yellow;
+	position:absolute;
+	right:0;
+	top:0;
+	margin:0px !important;
+}
+.visual-box .properties dd {
+	border:0px solid red;
+	height:16px;
+	overflow:hidden;
+}
+.visual-box .properties {
+	border:0px solid pink;
+}
+/**
+ * Inventory detail page
+ */
+.js-similar-widget table.visual-box h3 {
+	height:62px;
+	overflow:hidden;
+}
+.vehicle-detail-page {
+	height:261px;
+	overflow:hidden;
+}
+.vehicle-detail-page img {
+	position:relative;
+	top:-50px;
+}
+.property-list ul {
+	padding:0 0 0 0px;
+}
+.property-list ul li {
+	border-bottom:1px dotted #ddd;
+	padding:3px 0 3px 16px;
+	background:url(../img/arrow-sprite.png) no-repeat 5px -93px;
+}
+.contact-form .address-block img {
+	/*width:100%;*/
+	height:auto;
+	background:#fff;
+	border:1px solid #ddd;
+}
+.visual .tel_2,
+.inform-block .tel_2{
+	float:left;
+	width:165px;
+	padding:0 0 0 35px;
+	font-size:14px;
+	line-height:14px;
+	position:relative;
+}
+.visual .tel_2 strong,
+.inform-block .contact-info .tel_2 strong{
+	display:block;
+	font-size:30px;
+	line-height:24px;
+	margin:0 0 10px;
+}
+
+
+.visual .tel_2:after,
+{
+	content:'';
+	text-indent:-9999px;
+	overflow:hidden;
+	position:absolute;
+	top:2px;
+	left:0;
+	width:27px;
+	height:100%;
+	background:url(../img/sprite.png) no-repeat -400px -260px;
+}
+.inform-block .tel_2:after,
+{
+	left:10px;
+	height:45px;
+}
+
+/**
+ * Sitemap page classes & styles
+ */
+.text-columns .tri-col {
+	float:left;
+	width:30%;
+	margin:0 0 0 3%;
+}
+.text-columns .tri-col:first-child {
+	margin:0;
+}
+.text-columns .tri-col ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.text-columns .tri-col li {
+	padding:0px 0 0px 16px;
+	background:url(../img/arrow-sprite.png) no-repeat 5px -93px;
+}
+/**
+ * Form classes & styles
+ */
+.red_border, .invalid-field {
+	border: 2px solid #ac0107 !important;
+}
+input.tiny-field {
+	width:50px !important;
+	margin:0 5px 0 0 !important;
+}
+input.year {
+	width:80px !important;
+}
+/**
+ * Testimonies page
+ */
+
+/**
+ * Rules that apply when the menu switches to mobile
+ */
+ 
+ 
+ 
+ @media only screen and (max-width: 480px) {
+.chat-link, .is-home .content-section .holder, .footer-block, .sub-box.blue-box, .tabs-area .head-holder, .sort-box, #sidebar .notes, .not-home .logos-section, .piezas-holder p, .servicio-holder p, .tradein-holder p, .financiamiento-holder p, .inform-blocks .add-block, .inform-blocks, .photo.vehicle-detail-page, .header-holder .info{
+	display:none;
+}
+
+#content {padding-top:20px;}
+
+.header-holder
+{
+  padding-top:25px;
+}
+
+}
+
+
+/* Ofertas page */
+ 
+.ofertas-box {
+	background:#333;
+	padding:15px;
+	width:940px;
+	margin:0 0 10px 0;
+	position:relative;
+
+}
+ .rent-box{
+	    background:#e6e6e6;
+        width:950px;
+        padding:0px;
+        overflow-x:hidden;	
+		
+	 }
+	 
+iframe::-webkit-scrollbar {  
+    display: none;
+  }  
+  
+ 
+.refresh{
+	 display:block;
+	 width:100px; 
+	 height:70px;
+	 background:#3f6ca6 url(../img/icon-sprite.png) no-repeat -400px -500px;
+	 position:absolute;
+	 z-index:0;
+	 top:-25px;
+	 text-align:center;
+	 color:#fff;
+	 padding:30px 0 0 0;
+	 overflow:hidden;
+	 
+}

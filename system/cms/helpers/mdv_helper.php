@@ -43,10 +43,10 @@ function createVehiclePermaLink( $cms_vars, $args /* $ci, $mk, $md, $tr, $yr, $v
 		$url_to_return .= $cms_vars['mdv_inv_seo'][$args['ci']]."/";
 	
 	// finish url (assume vin is there )
-	$url_to_return .= strtolower( $args['mk'].'-'.parseStringForURL( $args['md'] ).'-'. ( ( $args['tr'] != '' ) ? parseStringForURL( $args['tr'] ).'-' : '' ) .$args['yr'].'-'.$args['vn'] );
+	$url_to_return .= strtolower( parseStringForURL( $args['mk'] ).'-'.parseStringForURL( $args['md'] ).'-'. ( ( $args['tr'] != '' ) ? parseStringForURL( $args['tr'] ).'-' : '' ) .$args['yr'].'-'.$args['vn'] );
 	
 	// return
-	return $url_to_return;
+	return urlencode( $url_to_return );
 }
 
 function getVehicleLink( $v, $slug, $cms_vars )

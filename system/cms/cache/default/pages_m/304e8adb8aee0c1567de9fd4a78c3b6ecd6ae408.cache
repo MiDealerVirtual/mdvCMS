@@ -1,28 +1,26 @@
-a:3:{s:16:"__cache_contents";O:8:"stdClass":20:{s:2:"id";s:1:"5";s:4:"slug";s:11:"contactenos";s:5:"title";s:12:"Contáctenos";s:3:"uri";s:11:"contactenos";s:9:"parent_id";s:1:"0";s:11:"revision_id";s:1:"1";s:9:"layout_id";s:1:"3";s:3:"css";s:0:"";s:2:"js";s:940:"// Callbacks to execute on page load
+a:3:{s:16:"__cache_contents";O:8:"stdClass":20:{s:2:"id";s:1:"4";s:4:"slug";s:11:"contactenos";s:5:"title";s:37:"Ubicación & Información de Contacto";s:3:"uri";s:11:"contactenos";s:9:"parent_id";s:1:"0";s:11:"revision_id";s:1:"1";s:9:"layout_id";s:1:"2";s:3:"css";s:0:"";s:2:"js";s:991:"// Callbacks to execute on page load
 var callbacks = [];
 
 // Page configuration
 callbacks[0] = function()
   {
-    // init tabs
-    tab_API.initTabs();
-  };
-
-// Part Order Form & Service Apt Form
-callbacks[1] = function()
-  {
-    // [CONTACT 1] create submit button event
-    form_API.createSubmitButtonClickEvent( '.jq_contact_submit_btn > a', '#contact_frm_1', "contact", "_frm_1" );
+    // init tabs api
+    /*tabs_api.init( { tab_select_apply:'parent'} );
+    tabs_api.detectCustomTab( 'mensaje',
+                              function()
+                              {
+                                // hide all tabs and select correct
+                                $( '.tab' ).parent().removeClass( 'active' );
+                                $( 'a[href^=#mensaje]' ).parent().addClass( 'active' );
+                                
+                                // hide all content and select correct
+                                $( '.tab-content' ).removeClass( 'tab-hidden' ).addClass( 'tab-hidden' );
+                                $( '#mensaje' ).removeClass( 'tab-hidden' );
+                              } );*/
     
-    // [CONTACT 1] create form event
-    form_API.createFormSubmitEvent( "#contact_frm_1", "_frm_1", ".jq_contact_submit_btn > a", "#jq_contact_loader_frm_1" );
-
-    // [CONTACT 2] create submit button event
-    form_API.createSubmitButtonClickEvent( '.jq_contact_submit_btn > a', '#contact_frm_2', "contact", "_frm_2" );
-    
-    // [CONTACT 1] create form event
-    form_API.createFormSubmitEvent( "#contact_frm_2", "_frm_2", ".jq_contact_submit_btn > a", "#jq_contact_loader_frm_2" );
+    // init forms api
+    forms_api.init( { "form_class":"form"} );
   };
 
 // Execute all callbacks
-cms_API.onJQReady( callbacks );";s:10:"meta_title";s:12:"Contáctenos";s:13:"meta_keywords";s:236:"Automarca Kia,Puerto Rico,Numero Telefonico,Telefono, Llamar,Contacte,Sobre Nosotros, Sobre Automarca Kia,Kia,Bayamón,San Juan,Carolina,Cataño,Vega Baja,Vega Alta,Aguas Buenas,Trujillo Alto,Toa Alta,Guaynabo,Puerto Rico,PR 00960,00960";s:16:"meta_description";s:341:"Contactenos llamando (787) 488-1011 o por nuestra pagina web www.AutomarcaPR.com. Automarca Kia es uno de los Concesionarios Kia mas reconocidos en todo Puerto Rico. Automarca Kia en Bayamón, Puerto Rico. Sirviendo a Bayamón, San Juan, Carolina, Cataño, Vega Baja, Vega Alta, Aguas Buenas, Trujillo Alto, Toa Alta y Guaynabo, Puerto Rico.";s:11:"rss_enabled";s:1:"0";s:16:"comments_enabled";s:1:"0";s:6:"status";s:4:"live";s:10:"created_on";s:10:"1313537246";s:10:"updated_on";s:10:"1317338831";s:13:"restricted_to";s:0:"";s:7:"is_home";s:1:"0";s:5:"order";s:1:"3";}s:15:"__cache_created";i:1317417932;s:20:"__cache_dependencies";a:0:{}}
+cms_API.onJQReady( callbacks );";s:10:"meta_title";s:37:"Ubicación e Información de Contacto";s:13:"meta_keywords";s:244:"CabreraAuto.com,Cabrera Auto,Buick,Cadillac,Chevrolet,Chrysler,Dodge,Ford,GMC,Suzuki,Jeep,Mazda,Mitsubishi,Nissan,RAM,Numero Telefonico,Llamar,Contactar,Arecibo Puerto Rico 00614,Hatillo,Camuy,Manati,Isabela, Vega Baja,Toa Baja,Bayamon,San Juan";s:16:"meta_description";s:573:"Contactenos llamando {pyro:variables:official_telephone} o por nuestra pagina web www.CabreraAuto.com. Cabrera Auto es uno de los Concesionarios Buick, Cadillac, Chevrolet, Chrysler, Dodge, Ford, GMC, Suzuki, Jeep, Mazda, Mitsubishi, Nissan, RAM más reconocidos en todo Puerto Rico. Cabrera Auto en Arecibo, Puerto Rico. Sirviendo a Arecibo Puerto Rico 00614, Hatillo Puerto Rico, Camuy Puerto Rico, Manati Puerto Rico, Isabela Puerto Rico, Vega Baja Puerto Rico, Vega Alta Puerto Rico, Toa Baja Puerto Rico, Toa Alta Puerto Rico, Bayamon Puerto Rico, San Juan Puerto Rico";s:11:"rss_enabled";s:1:"0";s:16:"comments_enabled";s:1:"0";s:6:"status";s:4:"live";s:10:"created_on";s:10:"1340143168";s:10:"updated_on";s:10:"1362165316";s:13:"restricted_to";s:0:"";s:7:"is_home";s:1:"0";s:5:"order";s:1:"2";}s:15:"__cache_created";i:1363126860;s:20:"__cache_dependencies";a:0:{}}

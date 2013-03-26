@@ -1,0 +1,128 @@
+<div id="contactable">
+    <div id="contactable_inner"></div>
+    <form id="contactForm" action="lms_post_api/coupon" method="post">
+        <div id="callback"></div>
+        <div class="holder">
+            <table cellpadding="0" cellspacing="0">
+                <tr class="step-1">
+                    <td colspan="2">
+                        <strong>Ingrese su información para recibir un certificado de Ahorro Instantáneo en la cantidad de $100.</strong>
+                    </td>
+                </tr>
+                <tr class="step-1">
+                    <td valign="top" class="text-right"><label for="condition">Interesado en<span class="red">*</span>:&nbsp;</label></td>
+                    <td valign="top">
+                        <div class="radio"><input type="radio" name="condition" id="coupon_condition_new" value="new" /><div>Vehículo Nuevo</div></div>
+                        <div class="radio"><input type="radio" name="condition" id="coupon_condition_used" value="used" /><div>Vehículo Usado</div></div>
+                    </td>
+                </tr>
+                <tr class="step-1">
+                    <td class="text-right"><label for="name">Nombre<span class="red">*</span>:&nbsp;</label></td>
+                    <td><input type="text" id="coupon_name" name="name" class="text" /></td>
+                </tr>
+                <tr class="step-1">
+                    <td class="text-right"><label for="telephone">Teléfono<span class="red">*</span>:&nbsp;</label></td>
+                    <td><input type="text" id="coupon_telephone" name="telephone" class="text" /></td>
+                </tr>
+                <tr class="step-1">
+                    <td class="text-right"><label for="email">Email<span class="red">*</span>:&nbsp;</label></td>
+                    <td><input type="text" id="coupon_email" name="email" class="text" /></td>
+                </tr>
+                <tr class="step-1">
+                    <td valign="top" class="text-right"><label for="shopping_status">Estatus de Compra<span class="red">*</span>:&nbsp;</label></td>
+                    <td valign="top">
+                        <select id="coupon_shopping_status" name="shopping_status">
+                            <option value="">Seleccione Estatus</option>
+                            <option value="Sólo mirando">Sólo mirando</option>
+                            <option value="Comprando y Comparando">Comprando y comparando</option>
+                            <option value="Quiero probar vehículo">Quiero probar vehículo</option>
+                            <option value="Listo para comprar">Listo para comprar</option>
+                            <option value="Encontrar un vehículo">Encontrar un vehículo</option>
+                            <option value="Necesito ayuda con financiamiento">Necesito ayuda con financiamiento</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="step-1 sub-step">
+                    <td colspan="2">
+                        <hr />
+                        <strong>Seleccione vehículo que le interesa</strong>
+                    </td>
+                </tr>
+                <tr class="step-1 sub-step">
+                    <td class="text-right"><label for="make">Marca<span class="red">*</span>:&nbsp;</label></td>
+                    <td>
+                        <select id="coupon_make" name="make">
+                            <option value="">Seleccione Marca</option>
+                            <option value="Buick">Buick</option>
+                            <option value="Cadillac">Cadillac</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Chrysler">Chrysler</option>
+                            <option value="Dodge">Dodge</option>
+                            <option value="Ford">Ford</option>
+                            <option value="GMC">GMC</option>
+                            <option value="Jeep">Jeep</option>
+                            <option value="Suzuki">Suzuki</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Ram">Ram</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="step-1 sub-step">
+                    <td class="text-right"><label for="model">Modelo<span class="red">*</span>:&nbsp;</label></td>
+                    <td>
+                        <select id="coupon_model" name="model" disabled="disabled" class="select2">
+                            <option value="">Seleccione Modelo</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="step-2">
+                    <td colspan="2">
+                        <h1>¡Duplica tus ahorros a <span>$200</span>!</h1>
+                        <h2>Haga una cita para probar un vehículo.</h2>
+                    </td>
+                </tr>
+                <tr class="step-2">
+                    <td class="text-right"><label for="date">Fecha:&nbsp;</label></td>
+                    <td><input type="text" id="coupon_date" name="date" class="text" /></td>
+                </tr>
+                <tr class="step-2">
+                    <td class="text-right"><label for="time">Hora:&nbsp;</label></td>
+                    <td>
+                        <select id="coupon_time" name="time">
+                            <option value="">Seleccione hora</option>
+                            <option value="8:00 AM">8:00 AM</option>
+                            <option value="9:00 AM">9:00 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="1:00 PM">1:00 PM</option>
+                            <option value="2:00 PM">2:00 PM</option>
+                            <option value="3:00 PM">3:00 PM</option>
+                            <option value="4:00 PM">4:00 PM</option>
+                            <option value="5:00 PM">5:00 PM</option>
+                            <option value="6:00 PM">6:00 PM</option>
+                            <option value="7:00 PM">7:00 PM</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div class="box_submit">
+                <input type="hidden" id="coupon_cid" name="cid" value="{if '{pyro:variables:redirect_client_id}' != ''}{pyro:variables:redirect_client_id}{else}{pyro:variables:mdv_ids}{/if}" />
+                <input type="hidden" id="coupon_certificate_value" name="certificate_value" value="100" />
+                <input type="hidden" id="coupon_submit_result" value="false" />
+                <input type="submit" class="submit step-1" value="Solicitar certificado" />
+                <a href="{pyro:url:site}coupons?amt=100" class="submit step-2 no" target="_blank">No gracias, obtener certificado</a>
+                <a href="{pyro:url:site}coupons?amt=200" class="submit step-2 yes" target="_blank">Sí, hacer una cita</a>
+                <? /*<input type="submit" class="submit step-2 no" value="No gracias, obtener certificado" />
+                <input type="submit" class="submit step-2 yes" value="Sí, hacer una cita" />*/ ?>
+                <div id="xf_loader" class="loader is-hidden"></div>
+            </div>
+            <p class="disclaimer" id="coupon_disclaimer">Oferta válida por treinta (30) días. Límite de un (1) certificado por vehículo comprado. <span class="can-hide"> No es válido con otros descuentos o promociones. Nulo donde esté prohibido por ley. </span>Otras restricciones pueden aplicar. <span class="can-hide">Por favor, consulte al dealer para más detalles. Certificado debe ser presentado a su llegada al dealer.</span></p>
+            <div class="box_close">
+                <div id="xf_close" class="close"><a href="#"></a></div>
+            </div>
+        </div>
+    </form>
+</div>

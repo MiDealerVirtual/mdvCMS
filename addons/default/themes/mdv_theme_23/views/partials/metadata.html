@@ -1,0 +1,60 @@
+	<!-- open meta data -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0 " />
+    <meta name="google-site-verification" content="mHO4LWonS6zeNa3f-nlWFFPyhYvcbOrrAkxBlcAhmGA" />
+    <!-- close meta data -->
+    
+    <!-- open page title -->
+    <title><?php if( isset( $seo_vehicle_label ) ): echo $seo_vehicle_label; else: ?>{if '{pyro:page:slug}' != ''}{pyro:page:title}{else}Inventario{/if}<?php endif; ?>{if '{pyro:page:slug}' != 'inicio'} | {pyro:variables:non_seo_dealer_inc_name}{/if} {pyro:variables:page_title_seo_suffix}</title>
+    <!-- close page title -->
+    
+    <!-- open css files -->
+    {pyro:theme:css file="theme_23.css" media="all"}
+    {pyro:theme:css file="p2h_ext.css" media="all"}
+    {pyro:theme:css file="jquery.ui.min.css" media="all"}
+    <!--[if lt IE 10]><link media="all" rel="stylesheet" href="css/ie.css"><![endif]-->
+    <!-- close css files -->
+
+    <!-- open js variables -->
+<?php
+	if ( isset( $js_vars ) ) {
+?>
+    <script>
+<?php
+		foreach ( $js_vars as $v ) {
+			echo "    ".$v."\n";
+		}
+?>
+	</script>
+<?php
+    }
+?>
+    <script>
+	var themeImagePath = "{pyro:variables:theme_image_path}";
+	</script>
+    <!-- close js variables -->
+
+    <!-- open theme js files -->
+    {pyro:theme:js file="jquery-1.8.2.min.js"}
+    {pyro:theme:js file="jquery.main.js"}
+    {pyro:theme:js file="jquery.ui.min.js"}
+    {pyro:theme:js file="local.js"}
+    <!--[if lt IE 9]>
+        {pyro:theme:js file="html5shiv.js"}
+    <![endif]-->
+	<!--[if IE]>
+        {pyro:theme:js file="PIE.js"}
+    <![endif]-->
+    <!-- close theme js files -->
+    
+    <!-- open/close mdv js files-->
+    {pyro:minifier:remote_theme_files js_files="p2h/ext.tabs.js,p2h/ext.noti.js,p2h/ext.forms.js,p2h/ext.quicksearch.js,p2h/ext.newsletter.js,jquery.maskedinput.min.js,jquery.contactable.min.js&v={pyro:variables:file_version_number}" css_files="jquery.contactable.css"}
+    
+    <!-- open/close favicon -->
+    {pyro:theme:favicon file="favicon.ico" base="url"}
+    
+    <!-- open/close description and keywords -->
+    {pyro:template:metadata}
+    
+    <!-- open/close typekit widget -->
+    {pyro:widget_fetcher:instance id="25"}

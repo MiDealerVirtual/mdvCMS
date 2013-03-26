@@ -1,32 +1,37 @@
-a:3:{s:16:"__cache_contents";O:8:"stdClass":20:{s:2:"id";s:1:"1";s:4:"slug";s:6:"inicio";s:5:"title";s:9:"Automarca";s:3:"uri";s:6:"inicio";s:9:"parent_id";s:1:"0";s:11:"revision_id";s:1:"1";s:9:"layout_id";s:1:"1";s:3:"css";s:0:"";s:2:"js";s:596:"// Callbacks to execute on page load
+a:3:{s:16:"__cache_contents";O:8:"stdClass":20:{s:2:"id";s:1:"1";s:4:"slug";s:6:"inicio";s:5:"title";s:12:"Cabrera Auto";s:3:"uri";s:6:"inicio";s:9:"parent_id";s:1:"0";s:11:"revision_id";s:1:"1";s:9:"layout_id";s:1:"1";s:3:"css";s:0:"";s:2:"js";s:1054:"// Callbacks to execute on page load
 var callbacks = [];
 
-// Setup jShowoff Config
+// Fix rollover
 callbacks[0] = function()
   {
-    // init tabs
-    $( '#features' ).jshowoff(
-      {
-        effect: 'none',
-        controls: true,
-        speed: 5000,
-        changeSpeed: 2000,
-        hoverPause: false,
-        controlText:
-        {
-          play:'>',
-          pause:'||',
-          previous:'&#171',
-          next:'&#187'
-        }
-      } );
+    // activate hover rollover state
+    anchorApi.addToAnchors( ".visual-box div h3 a", "parentParentNextNext", "activateEnlargeIconHover" );
+    anchorApi.addToAnchors( ".visual-box > a:not( .btn-more )", "next", "activateEnlargeIconHover" );
   };
 
-// Setup jCarousel Config
-callbacks[1] = function()
-  {
-    jcarousel_API.init( 1, 1, 9 );
+// Init quick search
+callbacks[1] = function() {
+  qsearch_api.init( {
+    "make_change_callback":
+      function( data ) {
+        // select dropdown
+        var targetSelect = $( "select#qs_models" ).get( 0 );
+        
+        // empty dropdown
+        targetSelect.options.length = 0;
+        
+        // re-populate with new data
+        $( targetSelect ).html( data ).attr( 'disabled', false );
+        
+        // remove gray "disabled" effect
+        $( targetSelect ).removeClass( "select2" );
+        
+        // remake forms
+        jcf.customForms.updateElement( "qs_models" );
+      },
+    "filter_condition": "new"
+    } );
   };
 
 // Execute all callbacks
-cms_API.onJQReady( callbacks );";s:10:"meta_title";s:15:"AutomarcaPR.com";s:13:"meta_keywords";s:207:"automarcapr.com,Automarca KIA,Kia,Rio, Forte,Soul,Sportage,Sorento,Optima,Sedona,Rondo,Borrengo,Bayamón,San Juan,Carolina,Cataño,Vega Baja,Vega Alta,Aguas Buenas,Trujillo Alto,Toa Alta,Guaynabo,Puerto Rico";s:16:"meta_description";s:541:"Bienvenidos a Automarca Kia, un Concesionario Kia. Sirviendo a Bayamon, Puerto Rico y cuidades vecinas Guaynabo Puerto Rico, San Juan Puerto Rico, Carolina Puerto Rico, Caguas Puerto Rico, Vega Baja Puerto Rico, Vega Alta Puerto Rico, Cataño Puerto Rico, Dorado Puerto Rico, Toa Alta Puerto Rico. El inventario de Automarca Kia incluye: Rio, Rio5, Forte, Forte 5-puerta, Forte Koup, Optima, Soul, Sportage, Sorento, Sedona, Rondo, Borrengo. Automarca Kia en Bayamon, Puerto Rico tiene el inventario de vehículos nuevos que estás buscando.";s:11:"rss_enabled";s:1:"0";s:16:"comments_enabled";s:1:"0";s:6:"status";s:4:"live";s:10:"created_on";s:10:"1313077968";s:10:"updated_on";s:10:"1317341831";s:13:"restricted_to";s:0:"";s:7:"is_home";s:1:"1";s:5:"order";s:1:"0";}s:15:"__cache_created";i:1317419567;s:20:"__cache_dependencies";a:0:{}}
+cms_API.onJQReady( callbacks );";s:10:"meta_title";s:12:"Cabrera Auto";s:13:"meta_keywords";s:242:"CabreraAuto.com,Cabrera Auto,Buick,Cadillac,Chevrolet,Chrysler,Dodge,Ford,GMC,Suzuki,Jeep,Mazda,Mitsubishi,Nissan,RAM,Usados,Arecibo Puerto Rico 00614,Arecibo,Hatillo,Camuy,Manati,Isabela,Vega Baja,Vega Alta,Toa Baja,Toa Alta,Bayamon,San Juan";s:16:"meta_description";s:615:"Bienvenidos a Cabrera Auto, un Concesionario Buick,Cadillac,Chevrolet,Chrysler,Dodge,Ford,GMC,Suzuki,Jeep,Mazda,Mitsubishi,Nissan,RAM,Usados. Sirviendo a Arecibo, Puerto Rico 00614 y ciudades vecinas, Hatillo Puerto Rico, Camuy Puerto Rico, Manati Puerto Rico, Isabela Puerto Rico, Vega Baja Puerto Rico, Vega Alta Puerto Rico, Toa Baja Puerto Rico, Toa Alta Puerto Rico, Bayamon Puerto Rico, San Juan Puerto Rico. Cabrera Auto en Arecibo, Puerto Rico tiene el inventario de vehículos Buick, Cadillac, Chevrolet, Chrysler, Dodge, Ford, GMC, Suzuki, Jeep, Mazda, Mitsubishi, Nissan, RAM, Usados que estás buscando.";s:11:"rss_enabled";s:1:"0";s:16:"comments_enabled";s:1:"0";s:6:"status";s:4:"live";s:10:"created_on";s:10:"1313077968";s:10:"updated_on";s:10:"1359560784";s:13:"restricted_to";s:0:"";s:7:"is_home";s:1:"1";s:5:"order";s:1:"0";}s:15:"__cache_created";i:1363123004;s:20:"__cache_dependencies";a:0:{}}
