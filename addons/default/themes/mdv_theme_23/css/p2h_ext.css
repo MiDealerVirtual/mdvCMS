@@ -340,7 +340,7 @@ input.year {
  */
   
  @media only screen and (max-width: 767px) {
-.chat-link, .is-home .content-section .holder, .footer-block, .sub-box.blue-box, .tabs-area .head-holder, .sort-box, #sidebar .notes, .not-home .logos-section, .piezas-holder p, .servicio-holder p, .tradein-holder p, .financiamiento-holder p, .inform-blocks .add-block, .inform-blocks, .photo.vehicle-detail-page, .header-holder .info, .refresh a, #contactable{
+.chat-link, .is-home .content-section .holder, .footer-block, .sub-box.blue-box, .tabs-area .head-holder, .sort-box, #sidebar .notes, .not-home .logos-section, .piezas-holder p, .servicio-holder p, .tradein-holder p, .financiamiento-holder p, .inform-blocks .add-block, .inform-blocks, .photo.vehicle-detail-page, .header-holder .info, .refresh a, #contactable, #coupon{
 	display:none;
 }
 
@@ -361,7 +361,18 @@ input.year {
 	overflow:hidden !important;
 }
 
+
+.switcher{
+	top:20px;/*bottom:20px;*/	
 }
+.btn-play-pause{
+	
+	top:18px; /*bottom:18px;*/
+	}
+
+
+}
+
 
 
 /* Ofertas page */
@@ -406,140 +417,6 @@ iframe::-webkit-scrollbar {
 
 .visual .schedule .col{
 	width:33%;
-}
-
-/**
- * slide contactable coupon 
- */
-/*.coupon-link {
-	position:fixed;
-	left:0;
-	top:52px;
-	z-index:1000;
-	text-indent:-9999px;
-	overflow:hidden;
-	background:url(../img/coupon.png) no-repeat;
-	width: 69px;
-	height: 246px;
-}*/
-#contactable #contactable_inner {
-	top:52px !important;
-	width:69px !important;
-	height:246px !important;
-	background:url(../img/coupon.png) 0 0 no-repeat !important;
-	color:#666 !important;
-}
-#contactable #contactForm {
-	top:52px !important;
-	/*width:350px !important;*/
-	height:auto !important;
-	background:url(../img/bk_feedback.png) 0 0 no-repeat !important;
-}
-#contactable #contactForm label {color:#ccc !important;}
-#contactable #contactForm .submit {
-	height:45px !important;
-	line-height:45px !important;
-	background:#3f6ca6/*url(../img/btn_feedback.png) 0 0 no-repeat*/;
-	border:0;
-}
-#contactable #contactForm .submit:hover  {
-	background:#021e59 /*url(../img/btn_feedback.png) 0 -45px no-repeat*/;
-}
-#contactable .loader {
-	background:url(../img/loader_bar.gif) 0 28px no-repeat !important;
-	height:50px !important;
-}
-#contactable .close a {
-	background:#3f6ca6 url(../img/btn_close.png) 0 0 no-repeat !important;
-}
-#contactable .close a:hover {
-	background:#021e59  url(../img/btn_close.png) 0 0 no-repeat !important;
-}
-#contactable table td {
-	color:#009933 !important;
-}
-#contactable #contactForm label {
-	color:#666 !important;
-}
-#contactable table {
-	width:480px !important;
-	margin:100px 15px 0 15px !important;
-}
-#contactable .select-area {
-	width:255px !important;
-}
-/*#contactable div {
-	display:block !important;
-	clear:both !important;
-}*/
-#contactable div.radio input {
-	clear:none !important;
-	float:left !important;
-	width:15px !important;
-	line-height:20px !important;
-	height:20px !important;
-}
-#contactable div.radio div {
-	clear:none !important;
-	float:left !important;
-	height:20px !important;
-	line-height:25px !important;
-	color: #666;
-}
-#contactable .text-right {
-	text-align:right;
-}
-#contactable .box_submit {
-	position:relative !important;
-}
-#contactable .disclaimer {
-	color:#000;
-	font-size:10px;
-	margin:0 10px;
-	padding-bottom:10px;
-	line-height:14px;
-}
-#contactable .box_close {
-	width:500px;
-	height:80px;
-	position:absolute;
-	bottom:0;
-	left:0;
-}
-#contactable hr {
-	width:/*460px*/100%;
-	border:0;
-	border-bottom:1px solid #ddd;}
-	
-#contactable .disclaimer{
-	color:#666 !important;
-	line-height:12px;
-	padding:15px;
-	margin: 0 5px 0 0;
-}
-#contactable table td strong {
-	font-size:16px;
-	font-weight:bold;	
-}
-#contactable .no {
-	width:auto !important;
-	height:auto !important;
-	float:left !important;
-	font-size:12px !important;
-	margin:15px 15px 0 35px !important;
-	padding:10px !important;
-}
-#contactable .yes {
-	width:auto !important;
-	height:auto !important;
-	background:#009933 !important;
-	float:right !important;
-	font-size:13px !important;
-	margin:15px 35px 0 15px !important;
-	padding:10px !important;
-}
-#contactable .yes:hover {
-	background:#063 !important;
 }
 
 .standout {

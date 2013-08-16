@@ -890,7 +890,7 @@ q:after{content:"";}
 .visual .tel strong, .visual .tel_2 strong,
 .inform-block .contact-info .tel strong{
 	display:block;
-	font-size:30px;
+	font-size:26px;
 	line-height:24px;
 	margin:0 0 10px;
 }

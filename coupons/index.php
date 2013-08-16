@@ -58,6 +58,13 @@
 		font-family:Helvetica, Arial, sans-serif;
 		font-weight:bold;
 	}
+	
+	 @media only screen and (max-width: 767px) {
+#coupon {
+	display:none;
+}
+}
+
 	</style>
     <!-- close styles -->
 </head>
@@ -75,7 +82,11 @@
 ?>
         <div class="coupon-text">Cita para el <?=$date?> a las <?=$time?></div>
 <?php
-	}
+	} else {
+?>
+        <div class="coupon-text">Cupón se expira el <?=date( "d/m/Y", strtotime( '+30 day', strtotime( date( "Y-m-d" ) ) ) )?></div>
+<?
+    }
 ?>
         <img src="cabrera-auto-coupon-<?=$defaultCoupon?>.png" alt="$<?=$defaultCoupon?> Coupon Certificate" style="float:left; clear:both;" />
     </div>

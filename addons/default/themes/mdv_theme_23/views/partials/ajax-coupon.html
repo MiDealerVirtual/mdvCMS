@@ -1,0 +1,247 @@
+<style>
+#coupon #coupon_inner {
+    top:52px !important;
+    width:69px !important;
+    height:246px !important;
+    background:url(../addons/default/themes/mdv_theme_23/img/coupon.png) 0 0 no-repeat !important;
+    color:#666 !important;
+}
+#coupon #contactForm {
+    top:52px !important;
+    /*width:350px !important;*/
+    height:auto !important;
+    background:url(../addons/default/themes/mdv_theme_23/img/bk_feedback.png) 0 0 no-repeat !important;
+}
+#coupon #contactForm label {color:#ccc !important;}
+#coupon #contactForm .submit {
+    height:45px !important;
+    line-height:45px !important;
+    background:#3f6ca6/*url(../addons/default/themes/mdv_theme_23/img/btn_feedback.png) 0 0 no-repeat*/;
+    border:0;
+}
+#coupon #contactForm .submit:hover  {
+    background:#021e59 /*url(../addons/default/themes/mdv_theme_23/img/btn_feedback.png) 0 -45px no-repeat*/;
+}
+#coupon .loader {
+    background:url(../addons/default/themes/mdv_theme_23/img/loader_bar.gif) 0 28px no-repeat !important;
+    height:50px !important;
+}
+#coupon .close a {
+    background:#3f6ca6 url(../addons/default/themes/mdv_theme_23/img/btn_close.png) 0 0 no-repeat !important;
+}
+#coupon .close a:hover {
+    background:#021e59  url(../addons/default/themes/mdv_theme_23/img/btn_close.png) 0 0 no-repeat !important;
+}
+#coupon table td {
+    color:#009933 !important;
+}
+#coupon #contactForm label {
+    color:#666 !important;
+}
+#coupon table {
+    width:480px !important;
+    margin:100px 15px 0 15px !important;
+}
+#coupon .select-area {
+    width:255px !important;
+}
+/*#coupon div {
+    display:block !important;
+    clear:both !important;
+}*/
+#coupon div.radio input {
+    clear:none !important;
+    float:left !important;
+    width:15px !important;
+    line-height:20px !important;
+    height:20px !important;
+}
+#coupon div.radio div {
+    clear:none !important;
+    float:left !important;
+    height:20px !important;
+    line-height:25px !important;
+    color: #666;
+}
+#coupon .text-right {
+    text-align:right;
+}
+#coupon .box_submit {
+    position:relative !important;
+}
+#coupon .disclaimer {
+    color:#000;
+    font-size:10px;
+    margin:0 10px;
+    padding-bottom:10px;
+    line-height:14px;
+}
+#coupon .box_close {
+    width:500px;
+    height:80px;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+#coupon hr {
+    width:/*460px*/100%;
+    border:0;
+    border-bottom:1px solid #ddd;}
+    
+#coupon .disclaimer{
+    color:#666 !important;
+    line-height:12px;
+    padding:15px;
+    margin: 0 5px 0 0;
+}
+#coupon table td strong {
+    font-size:16px;
+    font-weight:bold;   
+}
+#coupon .no {
+    width:auto !important;
+    height:auto !important;
+    float:left !important;
+    font-size:12px !important;
+    margin:15px 15px 0 35px !important;
+    padding:10px !important;
+}
+#coupon .yes {
+    width:auto !important;
+    height:auto !important;
+    background:#009933 !important;
+    float:right !important;
+    font-size:13px !important;
+    margin:15px 35px 0 15px !important;
+    padding:10px !important;
+}
+#coupon .yes:hover {
+    background:#063 !important;
+}
+</style>
+<div id="coupon">
+    <div id="coupon_inner"></div>
+    <form id="contactForm" action="lms_post_api/coupon" method="post">
+        <div id="callback"></div>
+        <div class="holder">
+            <table cellpadding="0" cellspacing="0">
+                <tr class="step-1">
+                    <td colspan="2">
+                        <strong>Ingrese su información para recibir un certificado de Ahorro Instantáneo en la cantidad de $100.</strong>
+                    </td>
+                </tr>
+                <tr class="step-1">
+                    <td valign="top" class="text-right"><label for="condition">Interesado en<span class="red">*</span>:&nbsp;</label></td>
+                    <td valign="top">
+                        <div class="radio"><input type="radio" name="condition" id="coupon_condition_new" value="new" /><div>Vehículo Nuevo</div></div>
+                        <div class="radio"><input type="radio" name="condition" id="coupon_condition_used" value="used" /><div>Vehículo Usado</div></div>
+                    </td>
+                </tr>
+                <tr class="step-1">
+                    <td class="text-right"><label for="name">Nombre<span class="red">*</span>:&nbsp;</label></td>
+                    <td><input type="text" id="coupon_name" name="name" class="text" /></td>
+                </tr>
+                <tr class="step-1">
+                    <td class="text-right"><label for="telephone">Teléfono<span class="red">*</span>:&nbsp;</label></td>
+                    <td><input type="text" id="coupon_telephone" name="telephone" class="text" /></td>
+                </tr>
+                <tr class="step-1">
+                    <td class="text-right"><label for="email">Email<span class="red">*</span>:&nbsp;</label></td>
+                    <td><input type="text" id="coupon_email" name="email" class="text" /></td>
+                </tr>
+                <tr class="step-1">
+                    <td valign="top" class="text-right"><label for="shopping_status">Estatus de Compra<span class="red">*</span>:&nbsp;</label></td>
+                    <td valign="top">
+                        <select id="coupon_shopping_status" name="shopping_status">
+                            <option value="">Seleccione Estatus</option>
+                            <option value="Sólo mirando">Sólo mirando</option>
+                            <option value="Comprando y Comparando">Comprando y comparando</option>
+                            <option value="Quiero probar vehículo">Quiero probar vehículo</option>
+                            <option value="Listo para comprar">Listo para comprar</option>
+                            <option value="Encontrar un vehículo">Encontrar un vehículo</option>
+                            <option value="Necesito ayuda con financiamiento">Necesito ayuda con financiamiento</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="step-1 sub-step">
+                    <td colspan="2">
+                        <hr />
+                        <strong>Seleccione vehículo que le interesa</strong>
+                    </td>
+                </tr>
+                <tr class="step-1 sub-step">
+                    <td class="text-right"><label for="make">Marca<span class="red">*</span>:&nbsp;</label></td>
+                    <td>
+                        <select id="coupon_make" name="make">
+                            <option value="">Seleccione Marca</option>
+                            <option value="Buick">Buick</option>
+                            <option value="Cadillac">Cadillac</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Chrysler">Chrysler</option>
+                            <option value="Dodge">Dodge</option>
+                            <option value="Ford">Ford</option>
+                            <option value="GMC">GMC</option>
+                            <option value="Jeep">Jeep</option>
+                            <option value="Suzuki">Suzuki</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Ram">Ram</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="step-1 sub-step">
+                    <td class="text-right"><label for="model">Modelo<span class="red">*</span>:&nbsp;</label></td>
+                    <td>
+                        <select id="coupon_model" name="model" disabled="disabled" class="select2">
+                            <option value="">Seleccione Modelo</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="step-2">
+                    <td colspan="2">
+                        <h1>¡Duplica tus ahorros a <span>$200</span>!</h1>
+                        <h2>Haga una cita para probar un vehículo.</h2>
+                    </td>
+                </tr>
+                <tr class="step-2">
+                    <td class="text-right"><label for="date">Fecha:&nbsp;</label></td>
+                    <td><input type="text" id="coupon_date" name="date" class="text" /></td>
+                </tr>
+                <tr class="step-2">
+                    <td class="text-right"><label for="time">Hora:&nbsp;</label></td>
+                    <td>
+                        <select id="coupon_time" name="time">
+                            <option value="">Seleccione hora</option>
+                            <option value="8:00 AM">8:00 AM</option>
+                            <option value="9:00 AM">9:00 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="1:00 PM">1:00 PM</option>
+                            <option value="2:00 PM">2:00 PM</option>
+                            <option value="3:00 PM">3:00 PM</option>
+                            <option value="4:00 PM">4:00 PM</option>
+                            <option value="5:00 PM">5:00 PM</option>
+                            <option value="6:00 PM">6:00 PM</option>
+                            <option value="7:00 PM">7:00 PM</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div class="box_submit">
+                <input type="hidden" id="coupon_cid" name="cid" value="23" />
+                <input type="hidden" id="coupon_certificate_value" name="certificate_value" value="100" />
+                <input type="hidden" id="coupon_submit_result" value="false" />
+                <input type="submit" class="submit step-1" value="Solicitar certificado" />
+                <a href="http://www.cabreraauto.com/coupons?amt=100" class="submit step-2 no" target="_blank">No gracias, obtener certificado</a>
+                <a href="http://www.cabreraauto.com/coupons?amt=200" class="submit step-2 yes" target="_blank">Sí, hacer una cita</a>
+                <div id="xf_loader" class="loader is-hidden"></div>
+            </div>
+            <p class="disclaimer" id="coupon_disclaimer">Oferta válida por treinta (30) días. Límite de un (1) certificado por vehículo comprado. <span class="can-hide"> No es válido con otros descuentos o promociones. Nulo donde esté prohibido por ley. </span>Otras restricciones pueden aplicar. <span class="can-hide">Por favor, consulte al dealer para más detalles. Certificado debe ser presentado a su llegada al dealer.</span></p>
+            <div class="box_close">
+                <div id="xf_close" class="close"><a href="#"></a></div>
+            </div>
+        </div>
+    </form>
+</div>

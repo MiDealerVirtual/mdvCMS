@@ -1,8 +1,23 @@
-a:3:{s:16:"__cache_contents";O:8:"stdClass":20:{s:2:"id";s:1:"1";s:4:"slug";s:6:"inicio";s:5:"title";s:12:"Cabrera Auto";s:3:"uri";s:6:"inicio";s:9:"parent_id";s:1:"0";s:11:"revision_id";s:1:"1";s:9:"layout_id";s:1:"1";s:3:"css";s:0:"";s:2:"js";s:1054:"// Callbacks to execute on page load
+a:3:{s:16:"__cache_contents";O:8:"stdClass":20:{s:2:"id";s:1:"1";s:4:"slug";s:6:"inicio";s:5:"title";s:12:"Cabrera Auto";s:3:"uri";s:6:"inicio";s:9:"parent_id";s:1:"0";s:11:"revision_id";s:1:"1";s:9:"layout_id";s:1:"1";s:3:"css";s:0:"";s:2:"js";s:1505:"// Callbacks to execute on page load
 var callbacks = [];
 
-// Fix rollover
+
+// Insert coupon
 callbacks[0] = function()
+  {
+    // init coupon
+    couponApi.init( {
+      "attachAfter"        : "#ajax-temp-coupon",
+      "contactableTemplate": "//"+location.host+"/addons/default/themes/mdv_theme_23/views/partials/ajax-coupon.html",
+      "inventoryModels"    : models,
+      "defaultCouponUrl"   : "http://"+location.host+"/coupons?",
+      "couponValues"       : [100,200],
+      "openOnInit"         : false
+    } );
+  };
+
+// Fix rollover
+callbacks[1] = function()
   {
     // activate hover rollover state
     anchorApi.addToAnchors( ".visual-box div h3 a", "parentParentNextNext", "activateEnlargeIconHover" );
@@ -10,7 +25,7 @@ callbacks[0] = function()
   };
 
 // Init quick search
-callbacks[1] = function() {
+callbacks[2] = function() {
   qsearch_api.init( {
     "make_change_callback":
       function( data ) {
@@ -34,4 +49,4 @@ callbacks[1] = function() {
   };
 
 // Execute all callbacks
-cms_API.onJQReady( callbacks );";s:10:"meta_title";s:12:"Cabrera Auto";s:13:"meta_keywords";s:242:"CabreraAuto.com,Cabrera Auto,Buick,Cadillac,Chevrolet,Chrysler,Dodge,Ford,GMC,Suzuki,Jeep,Mazda,Mitsubishi,Nissan,RAM,Usados,Arecibo Puerto Rico 00614,Arecibo,Hatillo,Camuy,Manati,Isabela,Vega Baja,Vega Alta,Toa Baja,Toa Alta,Bayamon,San Juan";s:16:"meta_description";s:615:"Bienvenidos a Cabrera Auto, un Concesionario Buick,Cadillac,Chevrolet,Chrysler,Dodge,Ford,GMC,Suzuki,Jeep,Mazda,Mitsubishi,Nissan,RAM,Usados. Sirviendo a Arecibo, Puerto Rico 00614 y ciudades vecinas, Hatillo Puerto Rico, Camuy Puerto Rico, Manati Puerto Rico, Isabela Puerto Rico, Vega Baja Puerto Rico, Vega Alta Puerto Rico, Toa Baja Puerto Rico, Toa Alta Puerto Rico, Bayamon Puerto Rico, San Juan Puerto Rico. Cabrera Auto en Arecibo, Puerto Rico tiene el inventario de vehículos Buick, Cadillac, Chevrolet, Chrysler, Dodge, Ford, GMC, Suzuki, Jeep, Mazda, Mitsubishi, Nissan, RAM, Usados que estás buscando.";s:11:"rss_enabled";s:1:"0";s:16:"comments_enabled";s:1:"0";s:6:"status";s:4:"live";s:10:"created_on";s:10:"1313077968";s:10:"updated_on";s:10:"1359560784";s:13:"restricted_to";s:0:"";s:7:"is_home";s:1:"1";s:5:"order";s:1:"0";}s:15:"__cache_created";i:1363123004;s:20:"__cache_dependencies";a:0:{}}
+cms_API.onJQReady( callbacks );";s:10:"meta_title";s:12:"Cabrera Auto";s:13:"meta_keywords";s:242:"CabreraAuto.com,Cabrera Auto,Buick,Cadillac,Chevrolet,Chrysler,Dodge,Ford,GMC,Suzuki,Jeep,Mazda,Mitsubishi,Nissan,RAM,Usados,Arecibo Puerto Rico 00614,Arecibo,Hatillo,Camuy,Manati,Isabela,Vega Baja,Vega Alta,Toa Baja,Toa Alta,Bayamon,San Juan";s:16:"meta_description";s:615:"Bienvenidos a Cabrera Auto, un Concesionario Buick,Cadillac,Chevrolet,Chrysler,Dodge,Ford,GMC,Suzuki,Jeep,Mazda,Mitsubishi,Nissan,RAM,Usados. Sirviendo a Arecibo, Puerto Rico 00614 y ciudades vecinas, Hatillo Puerto Rico, Camuy Puerto Rico, Manati Puerto Rico, Isabela Puerto Rico, Vega Baja Puerto Rico, Vega Alta Puerto Rico, Toa Baja Puerto Rico, Toa Alta Puerto Rico, Bayamon Puerto Rico, San Juan Puerto Rico. Cabrera Auto en Arecibo, Puerto Rico tiene el inventario de vehículos Buick, Cadillac, Chevrolet, Chrysler, Dodge, Ford, GMC, Suzuki, Jeep, Mazda, Mitsubishi, Nissan, RAM, Usados que estás buscando.";s:11:"rss_enabled";s:1:"0";s:16:"comments_enabled";s:1:"0";s:6:"status";s:4:"live";s:10:"created_on";s:10:"1313077968";s:10:"updated_on";s:10:"1375821771";s:13:"restricted_to";s:0:"";s:7:"is_home";s:1:"1";s:5:"order";s:1:"0";}s:15:"__cache_created";i:1375882689;s:20:"__cache_dependencies";a:0:{}}
