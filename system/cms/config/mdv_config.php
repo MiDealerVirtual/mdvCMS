@@ -30,6 +30,8 @@ $config['images_base_url'] = "http://midealervirtual.com/";
 | List all the frequently used (directory) paths.
 |
 */
+$image_config = json_decode(file_get_contents('http://labs.midealervirtual.com/config/image_server_flags.json'),true);
+
 $config['library_path'] = "library/";
 $config['js_path'] = $config['library_path']."js/";
 $config['backend_js_path'] = $config['js_path']."back/";
@@ -51,6 +53,29 @@ $config['website_images_groups_path'] = $config['website_images_path'].'groups/'
 	$config['iol_vehicle_pictures_med_path'] = $config['vehicle_pictures_path'].'iol_imports/med/';
 	$config['iol_vehicle_pictures_thumb_path'] = $config['vehicle_pictures_path'].'iol_imports/thumb/';
 	$config['iol_vehicle_pictures_tiny_path'] = $config['vehicle_pictures_path'].'iol_imports/tiny/';
+
+// Merge in the config
+$config = array_merge( $config, $image_config );
+
+
+
+// If we switch to S3
+if( $config['S3_DOMAIN'] ) {
+    // Vehicle paths
+    $config['vehicle_pictures_path']           = $config['S3_PHP_PATH'];
+    $config['vehicle_pictures_web_path']       = $config['S3_PHP_PATH'].'onsite/web/';
+    $config['vehicle_pictures_med_path']       = $config['S3_PHP_PATH'].'onsite/med/';
+    $config['vehicle_pictures_thumb_path']     = $config['S3_PHP_PATH'].'onsite/thumb/';
+    $config['vehicle_pictures_tiny_path']      = $config['S3_PHP_PATH'].'onsite/tiny/';
+    $config['vehicle_pictures_profile_path']   = $config['S3_PHP_PATH'].'onsite/profile/';
+
+    // IOL paths
+    $config['iol_vehicle_pictures_web_path']   = $config['S3_PHP_PATH'].'iol/web/';
+    $config['iol_vehicle_pictures_med_path']   = $config['S3_PHP_PATH'].'iol/med/';
+    $config['iol_vehicle_pictures_thumb_path'] = $config['S3_PHP_PATH'].'iol/thumb/';
+    $config['iol_vehicle_pictures_tiny_path']  = $config['S3_PHP_PATH'].'iol/tiny/';
+
+}
 
 /*
 |--------------------------------------------------------------------------

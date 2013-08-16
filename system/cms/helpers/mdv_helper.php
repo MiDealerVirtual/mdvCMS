@@ -68,6 +68,7 @@ function getVehicleLabel( $v )
 
 function getVehicleImagePath( $config, $v, $image_type, $prefix )
 {
+	$prefix = $config->item('USE_PREFIX') ? $prefix : '';
 	return $config->item( 'images_base_url' ).$config->item( ( $v->IOL_IMAGE == 1 ) ? 'iol_vehicle_pictures_'.$image_type.'_path' : 'vehicle_pictures_'.$image_type.'_path' ).$prefix.$v->IMAGE;	
 }
 
