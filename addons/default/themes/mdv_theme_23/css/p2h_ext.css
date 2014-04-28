@@ -37,7 +37,7 @@
 
 #nav {
 	/*padding:16px 0 0 0 !important;*/
-	font-weight:900;
+	/*	font-weight:900;*/
 }
 .stick-to-top {
 	padding-top:0px !important;
@@ -49,10 +49,10 @@
 .slideshow .text-box .more {
 	text-transform:uppercase;
 }
-.chat-link {
+/*.chat-link {
 	width: 70px;
 	height: 245px;
-}
+}*/
 #Pcontent {
 	line-height:14px !important;
 }
@@ -72,7 +72,7 @@
 }
 
 .header-holder .work-time{
-	width:70px;
+	width:72px;
 	background:none url(../img/icon-sprite.png) no-repeat 0px -50px !important;
 }
 
@@ -147,6 +147,9 @@
 /**
  * Inventory page classes & styles
  */
+.head-holder .pagination {
+	width: 350px !important;
+}
 #tab-gallery .visual-box .heading h3 {
 	width:160px;
 	height:30px;
@@ -340,7 +343,7 @@ input.year {
  */
   
  @media only screen and (max-width: 767px) {
-.chat-link, .is-home .content-section .holder, .footer-block, .sub-box.blue-box, .tabs-area .head-holder, .sort-box, #sidebar .notes, .not-home .logos-section, .piezas-holder p, .servicio-holder p, .tradein-holder p, .financiamiento-holder p, .inform-blocks .add-block, .inform-blocks, .photo.vehicle-detail-page, .header-holder .info, .refresh a, #contactable, #coupon{
+.chat-link, .is-home .content-section .holder, .footer-block, .sub-box.blue-box, .tabs-area .head-holder, .sort-box, #sidebar .notes, .not-home .logos-section, .piezas-holder p, .servicio-holder p, .tradein-holder p, .financiamiento-holder p, .inform-blocks .add-block, .inform-blocks, .photo.vehicle-detail-page, .header-holder .info, #contactable, #coupon{
 	display:none;
 }
 
@@ -373,46 +376,7 @@ input.year {
 
 }
 
-
-
-/* Ofertas page */
- 
-.ofertas-box {
-	background:#333;
-	padding:15px 15px 130px 15px;
-	width:940px;
-	margin:0 0 10px 0;
-	position:relative;
-
-}
- .rent-box{
-	    background:none /*#e6e6e6*/;
-        width:950px;
-        padding:0px;
-        overflow-x:hidden;	
-		
-	 }
-	 
-iframe::-webkit-scrollbar {  
-    display: none;
-  }  
-  
- 
-.refresh a{
-	 display:block;
-	 width:217px; 
-	 height:100px;
-	 background:url(../img/sprite.png) -285px -500px no-repeat;
-	 position:absolute;
-	 z-index:0;
-	 left:380px;
-	 bottom:20px;
-	 text-align:center;
-	 color:#fff;
-	 padding:0;
-	 overflow:hidden;
-	 
-}
+/* end mobile */
 
 
 .visual .schedule .col{
@@ -422,3 +386,4 @@ iframe::-webkit-scrollbar {
 .standout {
 	 background:red /*url("../img/arrow-standout.png") 0 0 no-repeat*/;
 }
+

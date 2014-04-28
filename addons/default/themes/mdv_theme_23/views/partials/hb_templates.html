@@ -1,0 +1,124 @@
+<script id="inventory-vehicles" type="text/x-handlebars-template">
+{{#each vehicles}}
+                                        <li>
+                                            <div class="visual-box">
+                                                <div class="heading">
+                                                    <em class="date">{{ANO}}</em>
+                                                    <h3><a href="{{VEHICLE_URL}}" title="{{MARCA}} {{MODELO}} {{AJUSTE}} {{ANO}}">{{MARCA}}<br />{{MODELO}} {{AJUSTE}}</a></h3>
+                                                </div>
+                                                <div class="image-box">
+                                                    <a href="{{VEHICLE_URL}}" title="{{MARCA}} {{MODELO}} {{AJUSTE}} {{ANO}}">
+                                                        <img src="{{thumbImg FOTO_1}}" alt="{{MARCA}} {{MODELO}} {{AJUSTE}} {{ANO}}" title="{{MARCA}} {{MODELO}} {{AJUSTE}} {{ANO}}" />
+                                                    </a>
+                                                    <a href="{{VEHICLE_URL}}" title="{{MARCA}} {{MODELO}} {{AJUSTE}} {{ANO}}" class="btn-more">more</a>
+                                                </div>
+                                                <dl class="properties">
+                                                    <dt>Color:</dt>
+                                                    <dd>{{COLOR}}</dd>
+                                                    <dt>Condición:</dt>
+                                                    <dd>{{CONDICION}}</dd>
+                                                    <dt>Trans.:</dt>
+                                                    <dd>{{TRANSMISION}}</dd>
+                                                    <dt>VIN:</dt>
+                                                    <dd>{{vinLastSix VIN}}</dd>
+                                                </dl>
+                                            </div>
+                                        </li>
+{{/each}}
+</script>
+
+<script id="inventory-vehicles-list" type="text/x-handlebars-template">
+{{#each vehicles}}
+                                        <li>
+                                            <table class="visual-box">
+                                                <tr>
+                                                    <td>
+                                                        <div class="image-box">
+                                                            <a href="{{VEHICLE_URL}}" title="{{MARCA}} {{MODELO}} {{AJUSTE}} {{ANO}}">
+                                                                <img src="{{thumbImg FOTO_1}}" alt="{{MARCA}} {{MODELO}} {{AJUSTE}} {{ANO}}" title="{{MARCA}} {{MODELO}} {{AJUSTE}} {{ANO}}" />
+                                                            </a>
+                                                            <a href="{{VEHICLE_URL}}" title="{{MARCA}} {{MODELO}} {{AJUSTE}} {{ANO}}" class="btn-more">more</a>
+                                                        </div>
+                                                        <h3><a href="{{VEHICLE_URL}}" title="{{MARCA}} {{MODELO}} {{AJUSTE}} {{ANO}}">{{MARCA}} {{MODELO}} {{AJUSTE}}</a></h3>
+                                                    </td>
+                                                    <td class="col2">
+                                                        <dl class="properties">
+                                                            <dt>Color:</dt>
+                                                            <dd>{{COLOR}}</dd>
+                                                            <dt>Condición:</dt>
+                                                            <dd>{{CONDICION}}</dd>
+                                                            <dt>Trans.:</dt>
+                                                            <dd>{{TRANSMISSION}}</dd>
+                                                            <dt>VIN:</dt>
+                                                            <dd>{{vinLastSix VIN}}</dd>
+                                                        </dl>
+                                                    </td>
+                                                    <td class="col3"><em class="date">{{ANO}}</em></td>
+                                                </tr>
+                                            </table>
+                                        </li>
+{{/each}}
+</script>
+
+<script id="inventory-filters" type="text/x-handlebars-template">
+{{#each filters}}
+    <div class="select-holder">
+        <select id="{{field}}-field" {{{dataAttributes}}} class="grey-select {{cssClasses}}">
+            <option value="{{label}}">{{label}}</option>
+        {{#each options}} 
+            <option value="{{value}}"{{#if active}} selected="selected"{{/if}}>{{title}}</option>
+        {{/each}}
+        </select>
+    </div>
+{{/each}}
+</script>
+
+<script id="inventory-paginate-top" type="text/x-handlebars-template">
+                                            <strong>Página:</strong>
+{{#if prev}}
+    {{#with prev}}
+                                            <a href="javascript:void(1);" class="prev-page {{cssClass}}" data-page-link="{{number}}">&lt;</a>
+    {{/with}}
+{{/if}}
+                                            <ul class="paging">
+
+{{#each pageLinks}}
+    {{#if active}}
+                                                <li class="active {{cssClass}}">{{number}}</li>
+    {{else}}
+                                                <li>
+                                                    <a class="{{cssClass}}" href="#" data-page-link="{{number}}">{{number}}</a>
+                                                </li>
+    {{/if}}
+{{/each}}
+                                            </ul>
+{{#if next}}
+    {{#with next}}
+                                            <a href="javascript:void(1);" class="next-page {{cssClass}}" data-page-link="{{number}}">&gt;</a>
+    {{/with}}
+{{/if}}
+</script>
+
+<script id="inventory-sorting" type="text/x-handlebars-template">
+{{#each options}}
+    {{#if desc}}
+            <li class="sort_down">
+                <a href="javascript:void(0);">&#9660; {{{field}}}</a>
+            </li>
+    {{/if}}
+
+    {{#if asc}}
+            <li class="sort_up">
+                <a href="javascript:void(0);">&#9650; {{{field}}}</a>
+            </li>
+    {{else}}
+
+        {{#if desc}} {{else}}
+            <li>
+                <a href="javascript:void(0);">{{{field}}}</a>
+            </li>
+        {{/if}}
+
+    {{/if}}
+{{/each}}
+</script>

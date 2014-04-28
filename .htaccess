@@ -7,3 +7,10 @@ SetOutputFilter DEFLATE
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
 Header set Expires "Thu, 15 Apr 2012 20:00:00 GMT"
 </FilesMatch>
+
+#<Files 403.shtml>
+#order allow,deny
+#allow from all
+#</Files>
+
+deny from 72.167.191.

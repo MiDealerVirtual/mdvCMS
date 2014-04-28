@@ -1,4 +1,12 @@
 <?php
+/**
+ * MDV IP afterhours checking
+ */
+/*define( 'ALLOWED_IP_CHECKING', TRUE );
+$currTime = date( "H:i:s" );
+if( $currTime >= "23:00:00" && $currTime <= "03:59:59" ) {
+	require_once( "iptest.php" );
+}*/
 
 /*
  *---------------------------------------------------------------

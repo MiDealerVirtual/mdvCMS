@@ -2145,7 +2145,7 @@ jcf.addModule({
 	name:'select',
 	selector:'select',
 	defaultOptions: {
-		hideDropOnScroll: true,
+		hideDropOnScroll: false,
 		showNativeDrop: false,
 		handleDropPosition: true,
 		selectDropPosition: 'bottom', // or 'top'

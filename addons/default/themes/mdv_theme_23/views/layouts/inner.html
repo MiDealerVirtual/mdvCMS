@@ -13,9 +13,24 @@
 {pyro:widget_fetcher:instance id="1"}
         <!-- close section#footer -->
 		
-        <!-- open chat -->
-        <a href="http://www.comm100.com/livechat" target="_blank" onclick="comm100_47054.openChatWindow(event,5000001,-1);return false;" class="chat-link"><img style="border:0px" id="comm100_ButtonImage" src="https://chatserver.comm100.com/BBS.aspx?siteId=47054&amp;planId=5000001&amp;partnerId=-1"></img></a>
-        <!-- close chat -->
+        <!--Begin Comm100 Live Chat Code-->
+  <script type="text/javascript">
+      var Comm100API = Comm100API || new Object;
+      Comm100API.chat_buttons = Comm100API.chat_buttons || [];
+      var comm100_chatButton = new Object;
+      comm100_chatButton.code_plan = 5000001;
+      comm100_chatButton.div_id = 'comm100-button-5000001';
+      Comm100API.chat_buttons.push(comm100_chatButton);
+      Comm100API.site_id = 47054;
+      Comm100API.main_code_plan = 5000001;
+      var comm100_lc = document.createElement('script');
+      comm100_lc.type = 'text/javascript';
+      comm100_lc.async = true;
+      comm100_lc.src = 'https://chatserver.comm100.com/livechat.ashx?siteId=' + Comm100API.site_id;
+      var comm100_s = document.getElementsByTagName('script')[0];
+      comm100_s.parentNode.insertBefore(comm100_lc, comm100_s);
+  </script>
+  <!--End Comm100 Live Chat Code-->
 	</div>
     
     <!-- open google analytics script -->

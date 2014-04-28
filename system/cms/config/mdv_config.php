@@ -30,8 +30,7 @@ $config['images_base_url'] = "http://midealervirtual.com/";
 | List all the frequently used (directory) paths.
 |
 */
-$image_config = json_decode(file_get_contents('http://labs.midealervirtual.com/config/image_server_flags.json'),true);
-
+$image_config         = json_decode(file_get_contents('/home1/mdv/image_server_flags.json'),true);
 $config['library_path'] = "library/";
 $config['js_path'] = $config['library_path']."js/";
 $config['backend_js_path'] = $config['js_path']."back/";

@@ -60,7 +60,7 @@ var chatApi = new function() {
 	// load chat thumbnail after page has loaded
 	this.loadChatThumbnail = function() {
 		// default link + image html string
-		var defaultString = '<a href="http://www.comm100.com/livechat" target="_blank" onclick="comm100_47054.openChatWindow(event,5000001,-1);return false;" class="chat-link"><img style="border:0px" id="comm100_ButtonImage" src="https://chatserver.comm100.com/BBS.aspx?siteId=47054&amp;planId=5000001&amp;partnerId=-1"></img></a>';
+		var defaultString = '<div class="chat-link"> <div id="comm100-button-5000001"></div>  </div>';
 		
 		// append to html
 		$("footer").after( defaultString );
